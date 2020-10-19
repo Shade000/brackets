@@ -1,14 +1,18 @@
 module.exports = function check(str, bracketsConfig) {
+    // your solution
     let stack = [];
+
     if (str.length % 2 != 0) return false;
+
+    let lenConfig = bracketsConfig.length;
     let checkeven = 1;
     let cheven;
     let chClose;
-    let ch = str.charAt(i);
-    let close = false;
-    let open = false;
-    let even = false;
     for (let i = 0; i < str.length; i++) {
+        let ch = str.charAt(i);
+        let close = false;
+        let open = false;
+        let even = false;
         for (let j = 0; j < bracketsConfig.length; j++) {
             if (bracketsConfig[j][0] == bracketsConfig[j][1] && ch == bracketsConfig[j][0]) {
                 even = true;
